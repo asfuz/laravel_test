@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
+            // Каждая статья должна иметь превью картинкой, заголовок, текст, дату создания и автора.
+            $table->string('preview_img'); //url
+            $table->string('title');
+            $table->text('body')->nullable();
+            $table->string('author');
             $table->timestamps();
         });
     }
