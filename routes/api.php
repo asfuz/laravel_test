@@ -3,6 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use Laravel\Sanctum\Http\Controllers\AuthenticatedSessionController;
+use Laravel\Sanctum\Http\Controllers\ConfirmablePasswordController;
+use Laravel\Sanctum\Http\Controllers\TwoFactorAuthenticatedSessionController;
+use Laravel\Sanctum\Http\Middleware\AuthenticateSession;
+
+
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\BlogController;
 

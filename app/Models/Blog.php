@@ -18,4 +18,8 @@ class Blog extends Model
 
     // protected $guard = '';
 
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }
