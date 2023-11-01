@@ -8,6 +8,7 @@ use Laravel\Sanctum\Http\Controllers\ConfirmablePasswordController;
 use Laravel\Sanctum\Http\Controllers\TwoFactorAuthenticatedSessionController;
 use Laravel\Sanctum\Http\Middleware\AuthenticateSession;
 
+use Laravel\Sanctum\Http\Controllers\CsrfCookieController;
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\BlogController;
@@ -35,3 +36,5 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('/sanctum/csrf-cookie', [CsrfCookieController::class, 'show']);

@@ -43,4 +43,12 @@ class AuthController extends BaseController
 
         return $this->sendResponse($success, 'User created successfully.');
     }
+
+    public function logout(Request $request) {
+        auth()->logout();
+
+        return $this->sendResponse(null, "User loged out successfully.");
+    }
+
+
 }

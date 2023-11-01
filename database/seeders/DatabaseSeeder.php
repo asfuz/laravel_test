@@ -33,9 +33,9 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('Samandar')
         ]);
 
-        User::factory(5)->create()
+        User::factory(100)->create()
             ->each(function ($user) {
-                Blog::factory(10)->create([
+                Blog::factory(rand(10,50))->create([
                     'user_id' => $user->id,
                 ]);
             });
